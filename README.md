@@ -52,3 +52,32 @@ curl -X PUT http://localhost:5004/users/4 -H 'accept: application/json' -H 'Cont
 ```shell
 curl -X DELETE http://localhost:5004/users/{:id}
 ```
+
+
+## ecs memo
+### APP_SETTINGS
+```shell
+APP_SETTINGS = src.config.ProductionConfig
+```
+### DATABASE_URL
+```shell
+DATABASE_URL = RDS_URI
+
+#RDS_URI base_example
+postgresql://{MASTER_USENAME}:{MASTER_PASSWORD}@{RDS_END_POINT}:{PORT}/{INITIAL_DB_NAME}
+
+#RDS_URI examples
+postgresql://hoge:password@hogehoge.ap-northeast-1.rds.amazonaws.com:5432/hoge_db
+```
+### DATABASE_TEST_URL
+```
+DATABASE_TEST_URL = postgres://postgres:postgres@api-db:5432/api_test
+```
+### FLASK_ENV
+```shell
+FLASK_ENV = production
+```
+### SECRET_KEY
+```shell
+SECRET_KEY = "A string of 50 characters or more"
+```
